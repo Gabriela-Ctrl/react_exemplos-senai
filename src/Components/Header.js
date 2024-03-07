@@ -1,25 +1,42 @@
 import styled from "styled-components";
 
 // Componente funcional Header
-
-const Home = () => {
+const Header = (props) => {
   return(
     <Container>
-      {/* Em React, "Wrapper" é um termo comumente usado para se referir a um componente que envolve */}
-      {/* Wrap para o conteúdo de texto */}
-      <ContentWrapper>
-        <Title>Bem-vindo!</Title>
-        <Subtitle>Explore nosso site e descubra tudo o que temos a oferecer.</Subtitle>
-        <CallToAction href="#">Conheça Agora</CallToAction>
-      </ContentWrapper>
+      
+      {/* Logo */}
+      <Logo>
+        <a href="/">
+          {/* Imagem do Logo */}
+          <img src="/images/Tree.png" alt="" />
+        </a>
+      </Logo>
 
-      {/* Wrap para a imagem de destaque */}
-      <ImageWrapper>
-        <HeroImage src="https://via.placeholder.com/500x300" alt="Hero Image"/>
-      </ImageWrapper>
+      {/* Menu de Navegação */}
+      <NavMenu>
+
+        {/* Links de Navegação */}
+        <a href="/">
+          <span>Home</span>
+        </a>
+        <a href="/about">
+          <span>About us</span>
+        </a>
+        <a href="/contact">
+          <span>Contact us</span>
+        </a>
+      </NavMenu>
+
+      {/* Wrapper adicional */}
+      <Wrap>Hi</Wrap>
+
+      {/* Botão de login */}
+      <Login>Login</Login>
     </Container>
   );
 };
+
 
 
 
