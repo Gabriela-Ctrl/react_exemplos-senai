@@ -6,6 +6,7 @@ import styled, { keyframes } from "styled-components";
 
 // Componente funcional About
 const About = () => {
+  reurn (
   <Container>
     {/* {Wrapper para o conteúdo da seção "Sobre Mim"} */}
     <ContentWrapper>
@@ -39,7 +40,8 @@ const About = () => {
        </SkillsWrapper>
     </ContentWrapper>
   </Container>
-}
+  );
+};
 
 // Animação de entrada (slide-up)
 const slideUpAnimation = keyframes`
