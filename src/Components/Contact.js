@@ -1,17 +1,37 @@
 import styled, { keyframes } from "styled-components";
 
 // Componente funcional Contact
+const Contact = () => {
+  return (
+    <Container>
+      {/* Wrapper par o conteúdo do formulário */}
+      <ContnetWrapper>
+        <Title>Entre em Contato</Title>
 
+        {/* Formulário de contato */}
+        <Form>
+          {/* Grupo de campos para o nome */}
+          <FormGroup>
+            <Label htmlFor="name">Nome</Label>
+            <Input type="text" id="name" placeholder="Digite seu nome"></Input>
+          </FormGroup>
 
+          <FormGroup>
+            <Label htmlFor="email">Email</Label>
+            <Input type="email" id="email" placeholder="Digite seu e-mail"></Input>
+          </FormGroup>
 
+          <FormGroup>
+            <Label htmlFor="message">Mensagem</Label>
+            <Input type="message" id="message" placeholder="Digite seu Mensagem"></Input>
+          </FormGroup>
 
-
-// 5ª Digitação
-
-
-
-
-
+          <SubmitButton type="submit">Enviar</SubmitButton>
+        </Form>
+      </ContnetWrapper>
+    </Container>
+  )
+}
 // Animação de entrada (fade-in e slide-up)
 const fadeInAnimation = keyframes`
   0% {
