@@ -1,40 +1,40 @@
-/* .App {
-  text-align: center;
+// Importação dos componentes necessarios
+import { BroserRouter as Router, Routes, Route} from "react-router-dom";
+import "./App.css";
+import Header from "./Components/Header";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
+
+// Componente Funcional principal App
+function App() {
+    return(
+        <div className="App">
+            {/* Componente Header */}
+            <Router>
+
+                {/* Componente Header */}
+                <Header>
+
+                    {/* Definição da rota */}
+                    <Routes>
+
+                        {/* Rota para página inicial */}
+                        <Route path="/" element={<Home />} />
+
+                        {/* Rota para página inicial */}
+                        <Route path="/About" element={<About />} />
+
+                        {/* Rota para página inicial */}
+                        <Route path="/Contact" element={<Contact />} />
+                        
+                    </Routes>
+
+                </Header>
+
+            </Router>
+        </div>
+    );
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-
+export default App;
