@@ -1,126 +1,67 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
-// Componente funcional Contact
-const Contact = () => {
-  return (
+// Componente funcional Home
+const Home = () => {
+  return(
     <Container>
-      {/* Wrapper par o conteúdo do formulário */}
-      <ContnetWrapper>
-        <Title>Entre em Contato</Title>
+      {/* Em React, "Wrapper" é um termo comumente usado para se referir a um componente que envolve */}
+      {/* Wrap para o conteúdo de texto */}
+      <ContentWrapper>
+        <Title>Bem-vindo!</Title>
+        <Subtitle>Explore nosso site e descubra tudo o que temos a oferecer.</Subtitle>
+        <CallToAction href="#">Conheça Agora</CallToAction>
+      </ContentWrapper>
 
-        {/* Formulário de contato */}
-        <Form>
-          {/* Grupo de campos para o nome */}
-          <FormGroup>
-            <Label htmlFor="name">Nome</Label>
-            <Input type="text" id="name" placeholder="Digite seu nome"></Input>
-          </FormGroup>
-
-          <FormGroup>
-            <Label htmlFor="email">Email</Label>
-            <Input type="email" id="email" placeholder="Digite seu e-mail"></Input>
-          </FormGroup>
-
-          <FormGroup>
-            <Label htmlFor="message">Mensagem</Label>
-            <Input type="message" id="message" placeholder="Digite seu Mensagem"></Input>
-          </FormGroup>
-
-          <SubmitButton type="submit">Enviar</SubmitButton>
-        </Form>
-      </ContnetWrapper>
+      {/* Wrap para a imagem de destaque */}
+      <ImageWrapper>
+        <HeroImage src="https://via.placeholder.com/500x300" alt="Hero Image"/>
+      </ImageWrapper>
     </Container>
-  )
-}
-// Animação de entrada (fade-in e slide-up)
-const fadeInAnimation = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
+  );
+};
+
 
 // Container principal
 const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   background-color: #f5f5f5;
 `;
 
-// Wrapper para o conteúdo do formulário
+// Wrapper para o conteúdo de texto
 const ContentWrapper = styled.div`
   max-width: 500px;
   padding: 40px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  animation: ${fadeInAnimation} 0.5s ease-in-out;
-`;
-
-// Título do formulário
-const Title = styled.h2`
-  font-size: 28px;
-  font-weight: bold;
-  color: #333333;
-  margin-bottom: 20px;
   text-align: center;
 `;
 
-// Estilo do formulário
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-`;
-
-// Estilo dos grupos de campos
-const FormGroup = styled.div`
+// Título principal
+const Title = styled.h1`
+  font-size: 36px;
+  font-weight: bold;
+  color: #333333;
   margin-bottom: 20px;
 `;
 
-// Estilo dos labels
-const Label = styled.label`
-  font-size: 16px;
-  font-weight: bold;
-  color: #333333;
-  margin-bottom: 8px;
-  display: block;
+// Subtítulo
+const Subtitle = styled.p`
+  font-size: 18px;
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 30px;
 `;
 
-// Estilo dos campos de input
-const Input = styled.input`
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  width: 100%;
-`;
-
-// Estilo da área de texto
-const Textarea = styled.textarea`
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  width: 100%;
-  resize: vertical;
-`;
-
-// Estilo do botão de envio
-const SubmitButton = styled.button`
+// Botão de "Call to Action"
+const CallToAction = styled.a`
+  display: inline-block;
   padding: 12px 24px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #ffffff;
   background-color: #007bff;
-  border: none;
+  color: #ffffff;
+  text-decoration: none;
   border-radius: 4px;
-  cursor: pointer;
+  font-weight: bold;
   transition: background-color 0.3s ease-in-out;
 
   &:hover {
@@ -128,4 +69,17 @@ const SubmitButton = styled.button`
   }
 `;
 
-export default Contact;
+// Wrapper para a imagem de destaque
+const ImageWrapper = styled.div`
+  margin-left: 40px;
+`;
+
+// Imagem de destaque
+const HeroImage = styled.img`
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+`;
+
+export default Home;
