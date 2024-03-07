@@ -1,40 +1,36 @@
-// Importação dos componentes necessarios
-import { BroserRouter as Router, Routes, Route} from "react-router-dom";
+// Impotação dos componentes necessários
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 
-// Componente Funcional principal App
+// Componente funcional principal App
 function App() {
-    return(
+    return (
         <div className="App">
-            {/* Componente Header */}
+            {/* Componente Router do React Router  */}
             <Router>
-
                 {/* Componente Header */}
-                <Header>
+                <Header />
 
-                    {/* Definição da rota */}
-                    <Routes>
+                {/* Definição das rotas */}
+                <Routes>
+                    {/* Rotas para a página inicial */}
+                    <Route path="/" element={<Home />} />
+                    
+                    {/* Rota para a página "Sobre" */}
+                    <Route path="/" element={<About />} />
 
-                        {/* Rota para página inicial */}
-                        <Route path="/" element={<Home />} />
-
-                        {/* Rota para página inicial */}
-                        <Route path="/About" element={<About />} />
-
-                        {/* Rota para página inicial */}
-                        <Route path="/Contact" element={<Contact />} />
-                        
-                    </Routes>
-
-                </Header>
-
+                    {/* Rota para a página "Contato" */}
+                    <Route path="/" element={<Contact />} />
+                </Routes>
             </Router>
         </div>
+
     );
 }
 
+// Exportação do componente App
 export default App;
