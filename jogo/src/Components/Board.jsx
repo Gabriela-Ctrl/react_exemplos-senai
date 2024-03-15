@@ -41,10 +41,10 @@ const Board = () => {
                 Status:{" "}
                 {winner ? (
                     //Exibe o vencedo se houver um
-                    <p className="winner">O vencedor é: {winner}!</p>
+                    <p className="winner">O vencedor é: {xIsNext ? "Jogador 2" : "Jogador 1"}!</p>
                 ) : (
                     //Exibe o próximo jogador se não houver um vencedor
-                    `Próximo a jogar: ${xIsNext ? "X" : "O"}`
+                    `Próximo a jogar: ${xIsNext ? "Jogador 1" : "Jogador 2"}`//Mudando "X" e "O" para "Jogador 1" e"Jogador 2"
                 )}
             </div>
              {/* Renderização das linhas do tabuleiro com componentes Square */}

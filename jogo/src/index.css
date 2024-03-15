@@ -8,7 +8,7 @@ html{
   justify-content: center;
   align-items: center;
 
-  background-color: #f4f4f4;
+  background-image: url(Fundo.jpg); /* adicionei imagem de fundo */
   
   font-family: Helvetica;
   text-align: center;
@@ -20,11 +20,13 @@ html{
   height: 100px;
 
   background-color: #ddd;
-  border: 1px solid #ccc;
+  border: 1px solid #3e3b3b;
+  border-radius: 5px; /*arredondamento das bordas*/
   
   font-size: 32px;
   font-weight: bold;
   text-align: center;
+  
 
   vertical-align: middle;
   cursor: pointer;
@@ -32,7 +34,9 @@ html{
 
 /* Estilo para o vencedor */
 .winner {
-  background-color: #ffcc00;
+  background-color: #249636; /*Mudei de cor*/
+  color: #ddd;
+   border-radius: 5px; /* arredondamento da mensagem */
 }
 
 /* Estilo para o status do jogo */
@@ -51,8 +55,8 @@ html{
 
   font-size: 18px;
   color: #fff;
-
-  background-color: #007bff;
+  background-color: #249636;
+  
 
   border: none;
   border-radius: 4px;
@@ -62,5 +66,6 @@ html{
 
 /* Estilo para o botão de reiniciar no hover */
 .reset-button:hover {
-  background-color: #0056b3;
+  background-color: #14501d;
+  
 }
